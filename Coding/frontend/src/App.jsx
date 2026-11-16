@@ -8,7 +8,9 @@ import {
 } from 'recharts'
 import './style.css'
 
-const API = 'http://127.0.0.1:8000'
+const API =
+  import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000'
+  
 
 const fields = [
   ['Global_active_power', 'Current active power (kW)', '1.10'],
