@@ -1,0 +1,507 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+/* ==============================
+   GLOBAL STYLES
+============================== */
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #e8eef8;
+  background: #080e19;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: radial-gradient(
+    ellipse at 80% 0%,
+    #17304b 0%,
+    #080e19 45%
+  );
+}
+
+/* ==============================
+   MAIN CONTAINER
+============================== */
+
+.shell {
+  max-width: 1120px;
+  margin: auto;
+  padding: 38px 24px 28px;
+}
+
+/* ==============================
+   HEADER
+============================== */
+
+.top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+}
+
+.brand-mark {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: #f4b942;
+  color: #152033;
+  font-size: 26px;
+  box-shadow: 0 8px 30px #f4b94233;
+}
+
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: #f2b84b;
+  margin: 0 0 7px;
+}
+
+h1,
+h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: 28px;
+  letter-spacing: -1px;
+}
+
+h1 span {
+  color: #f2b84b;
+}
+
+.sub {
+  margin: 5px 0 0;
+  color: #9baac0;
+  font-size: 13px;
+}
+
+.status {
+  margin-left: auto;
+  font-size: 11px;
+  color: #9fb2c9;
+  border: 1px solid #26374d;
+  border-radius: 30px;
+  padding: 9px 13px;
+}
+
+.status i {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4ed39a;
+  margin-right: 8px;
+}
+
+/* ==============================
+   INTRO SECTION
+============================== */
+
+.intro {
+  margin: 34px 0 22px;
+  border: 1px solid #26374d;
+  background: linear-gradient(115deg, #15263a, #101a2a);
+  border-radius: 22px;
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.intro h2 {
+  font-size: 24px;
+  max-width: 620px;
+  line-height: 1.2;
+}
+
+.intro p:last-child {
+  color: #9baac0;
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+.bolt {
+  font-size: 68px;
+  color: #f2b84b;
+  filter: drop-shadow(0 0 24px #f2b84b55);
+}
+
+/* ==============================
+   INPUT PANEL
+============================== */
+
+.panel {
+  background: #101a29;
+  border: 1px solid #26374d;
+  border-radius: 22px;
+  padding: 26px;
+}
+
+.panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.panel-head h2 {
+  font-size: 20px;
+}
+
+.tag {
+  font-size: 11px;
+  color: #f2b84b;
+  border: 1px solid #6c552b;
+  border-radius: 20px;
+  padding: 6px 10px;
+}
+
+/* ==============================
+   FORM FIELDS
+============================== */
+
+.fields {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.fields label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: #aebbd0;
+  font-size: 12px;
+}
+
+.fields input {
+  width: 100%;
+  background: #0a1320;
+  border: 1px solid #2b3c52;
+  border-radius: 10px;
+  color: #f3f6fb;
+  padding: 12px;
+  font: inherit;
+  outline: none;
+}
+
+.fields input:focus {
+  border-color: #f2b84b;
+  box-shadow: 0 0 0 3px #f2b84b1c;
+}
+
+/* ==============================
+   BUTTONS
+============================== */
+
+button {
+  margin-top: 24px;
+  border: 0;
+  border-radius: 11px;
+  padding: 14px 20px;
+  background: #f2b84b;
+  color: #172033;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+/* ==============================
+   PREDICTION RESULT
+============================== */
+
+.result {
+  margin-top: 22px;
+  border: 1px solid #39765f;
+  background: #102b28;
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.result strong {
+  font: 700 34px 'Space Grotesk';
+  color: #6ee0b0;
+}
+
+.result small {
+  font-size: 15px;
+}
+
+.result p:last-child {
+  font-size: 12px;
+  color: #a6c8ba;
+  margin-bottom: 0;
+}
+
+.error {
+  color: #ff9c9c;
+  font-size: 13px;
+}
+
+/* ==============================
+   DASHBOARD SECTION HEADINGS
+============================== */
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin: 34px 0 18px;
+}
+
+.section-title h2 {
+  font-size: 23px;
+}
+
+.muted {
+  color: #91a2b9;
+  font-size: 12px;
+  margin: 7px 0 0;
+}
+
+/* ==============================
+   SUMMARY STATISTICS CARDS
+============================== */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.stat-card {
+  padding: 20px;
+  background: linear-gradient(145deg, #142338, #101a29);
+  border: 1px solid #293d55;
+  border-radius: 16px;
+  min-width: 0;
+}
+
+.stat-card span,
+.stat-card small {
+  display: block;
+  color: #9baac0;
+  font-size: 11px;
+}
+
+.stat-card strong {
+  display: block;
+  color: #f4c15a;
+  font: 700 27px 'Space Grotesk', sans-serif;
+  margin: 12px 0 8px;
+  overflow-wrap: anywhere;
+}
+
+.stat-card strong small {
+  display: inline;
+  font-size: 13px;
+  color: #f4c15a;
+}
+
+/* ==============================
+   CHARTS GRID
+============================== */
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.chart-card {
+  min-width: 0;
+  margin-bottom: 18px;
+  padding: 22px;
+  background: #101a29;
+  border: 1px solid #293d55;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.chart-heading {
+  margin-bottom: 16px;
+}
+
+.chart-heading h3 {
+  margin: 0;
+  font: 600 16px 'Space Grotesk', sans-serif;
+  color: #edf3fb;
+}
+
+.chart-heading p {
+  margin: 6px 0 0;
+  color: #8fa1b9;
+  font-size: 11px;
+}
+
+.empty-chart {
+  min-height: 260px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #8fa1b9;
+  font-size: 13px;
+  padding: 20px;
+}
+
+/* ==============================
+   ANALYTICS MESSAGES
+============================== */
+
+.analytics-message {
+  margin-top: 20px;
+}
+
+.analytics-message p:not(.eyebrow) {
+  color: #9baac0;
+  font-size: 13px;
+}
+
+/* ==============================
+   REFRESH BUTTON
+============================== */
+
+.refresh-btn {
+  margin-top: 0;
+  padding: 10px 14px;
+  border: 1px solid #43536a;
+  background: #17263a;
+  color: #e8eef8;
+}
+
+.refresh-btn:hover {
+  background: #223650;
+}
+
+/* ==============================
+   PREDICTION SECTION
+============================== */
+
+.prediction-heading {
+  margin-top: 42px;
+}
+
+.status .offline-dot {
+  background: #ff7474;
+}
+
+/* ==============================
+   FOOTER
+============================== */
+
+footer {
+  text-align: center;
+  color: #718198;
+  font-size: 11px;
+  padding: 22px 0;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+============================== */
+
+@media (max-width: 900px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .shell {
+    padding: 24px 14px;
+  }
+
+  .status {
+    position: absolute;
+    right: 0;
+    top: 60px;
+  }
+
+  .top {
+    padding-bottom: 28px;
+  }
+
+  .intro {
+    padding: 22px;
+  }
+
+  .intro h2 {
+    font-size: 20px;
+  }
+
+  .bolt {
+    font-size: 45px;
+  }
+
+  .fields {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .section-title {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 9px;
+  }
+
+  .stat-card {
+    padding: 14px;
+  }
+
+  .stat-card strong {
+    font-size: 21px;
+  }
+
+  .chart-card {
+    padding: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .fields {
+    grid-template-columns: 1fr;
+  }
+
+  .intro {
+    gap: 10px;
+  }
+
+  .bolt {
+    display: none;
+  }
+
+  .status {
+    font-size: 9px;
+  }
+}

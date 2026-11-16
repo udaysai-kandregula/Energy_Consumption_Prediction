@@ -1,0 +1,7 @@
+{
+  "selected_model": "Hist Gradient Boosting",
+  "test_mae": 0.31867290069834553,
+  "test_rmse": 0.456340953194242,
+  "test_r2": 0.6411537289123411,
+  "test_rows": 2624
+}
